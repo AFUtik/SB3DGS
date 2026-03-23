@@ -1,4 +1,5 @@
 #include "text.h"
+#include "Shader.hpp"
 
 Text::Text()
 {
@@ -68,7 +69,7 @@ mesh.AddFace(base + 1, base + 3, base + 2);
 mesh.Update();
 }
 
-void Text::Render()
+void Text::Render(BasicShader* shader)
 {
-mesh.Render();
+    mesh.Render(shader);
 }

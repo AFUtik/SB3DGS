@@ -57,7 +57,7 @@ void Image::Update()
 {
 mesh.Update();
 }
-void Image::Render()
+void Image::Render(BasicShader* shader)
 {
-mesh.Render();
+mesh.Render(shader);
 }

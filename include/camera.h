@@ -11,6 +11,7 @@ public:
 glm::vec3 position;
 glm::vec3 front;
 glm::vec3 up;
+glm::mat4 ortho;
  
 float fov;
 float aspect;
@@ -23,4 +24,6 @@ Camera();
 
 glm::mat4 getProjectionMatrix();
 glm::mat4 getViewMatrix();
+const glm::mat4& getOrtho();
+
 };

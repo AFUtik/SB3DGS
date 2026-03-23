@@ -54,23 +54,24 @@ void Button::Update()
 body.Update();
 text.Update();
 }
-void Button::Check(float mosPosX, float mosPosY)
+
+void Button::Check(BasicShader* shader, float mosPosX, float mosPosY)
 {
 
 if(mosPosX > x && mosPosY > -y && mosPosX < width + x && mosPosY < height - y)
 {
-	ActiveBody.Render();
+	ActiveBody.Render(shader);
 	this->Call();
 }
 
 }
 
-void Button::Render(float mosPosX, float mosPosY)
+void Button::Render(BasicShader* shader, float mosPosX, float mosPosY)
 {
-	body.Render();
+	body.Render(shader);
 	if(mosPosX > x && mosPosY > -y && mosPosX < width + x && mosPosY < height - y)
 	{
-	ActiveBody.Render();
+	ActiveBody.Render(shader);
 	}
-	text.Render();
+	text.Render(shader);
 }
